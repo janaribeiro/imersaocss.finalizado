@@ -1,0 +1,217 @@
+/*reset do css */
+
+* {
+    margin: 0;
+    padding: 0;
+    /*! box-sizing: border-box; */
+    /* ver videos da Vanessa Tonini faland sobre box-sizing */
+    color: white;
+    /*! text-indent: 0.5em; */
+}
+
+body {
+    background-image: url('https://analyticsindiamag.com/wp-content/uploads/2019/05/learning-rate.gif');
+    background-size: 350vh;
+    height: 100vh;
+    font-family: cursive;
+    background-repeat: no-repeat;
+}
+
+
+/* se a tela tiver pelo menos 400px vai carregar esses estilos */
+
+@media (min-width: 400px) {
+    body {
+        font-size: 13px;
+    }
+    /*brackpoints*/
+}
+
+@media (min-width: 700px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 22px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu {
+    background-color: gray;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.titulos {
+    transform: scale(0.3)translateY(35vh);
+    opacity: 0;
+    animation: linear 2s animacaoTitulos forwards;
+}
+
+@keyframes animacaoTitulos {
+    100% {
+        transform: scale(1)translateY(0);
+        opacity: 1;
+    }
+}
+
+.site-title {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.site-subtitle {
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+.img-portfolio {
+    height: 180px;
+    width: 180px;
+}
+
+.menu a {
+    color: white;
+    display: block;
+    padding: 10px 10px;
+    transition: background-color 1s, color 1s;
+}
+
+.sobre,
+.portfolio {
+    background-image: url('https://img.freepik.com/fotos-gratis/plano-de-fundo-texturizado-preto_24972-764.jpg?size=626&ext=jpg');
+    background-size: 100vh;
+    text-align: center;
+    line-height: 3;
+}
+
+.sobre,
+.contato,
+.portfolio .grid {
+    display: grid;
+    gap: 3em;
+}
+
+@media (min-width: 1000px) {
+    /*se a tela tiver pelo menos 540px vai carregar esses estilos*/
+    .sobre,
+    .portfolio .grid {
+        grid-template-columns: 230px 230px;
+        /*colunas */
+        align-content: center;
+        justify-content: center;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+    font-size: 2.5em;
+    font-family: cursive;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.sobre p {
+    color: white;
+    text-indent: 1.4em;
+    margin-bottom: 1.4em;
+    text-align: justify;
+}
+
+.avatar {
+    float: right;
+    margin-left: 2em;
+}
+
+.avatar img {
+    border-radius: 50%;
+    height: 225px;
+}
+
+.grid .img-portfolio {
+    height: 135px;
+    margin-top: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.grid .img-portfolio:hover {
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.grid figcaption {
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    color: white;
+}
+
+.contato a {
+    color: whitesmoke;
+    font-size: 4em;
+}
+
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: yellow 0px 0px 20px;
+    transition: 0.1s;
+}
+
+.contato .icons {
+    text-align: center;
+    background-color: black;
+}
+
+.contato h2 {
+    background-color: gray;
+    margin-bottom: -3em;
+}
+
+.menu a:hover {
+    background-color: black;
+}
+
+.alura a {
+    color: yellow;
+}
